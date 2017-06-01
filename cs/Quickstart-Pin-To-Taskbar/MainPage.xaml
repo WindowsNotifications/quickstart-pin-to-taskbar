@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="Quickstart_Pin_To_Taskbar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Quickstart_Pin_To_Taskbar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <Flyout x:Name="FlyoutPinTip">
+            <StackPanel>
+                <TextBlock
+                    Text="Pin our app to Taskbar for quick access!"/>
+                <Button
+                    x:Name="ButtonPinToTaskbar"
+                    Content="Pin to Taskbar"
+                    Click="ButtonPinToTaskbar_Click"
+                    Margin="0,6,0,0"/>
+            </StackPanel>
+        </Flyout>
+
+    </Page.Resources>
+
+    <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel Margin="24">
+
+            <TextBlock
+                Text="Quickstart: Pin your app to Taskbar"
+                Style="{StaticResource TitleTextBlockStyle}"
+                TextWrapping="Wrap"/>
+
+            <RichTextBlock Margin="0,12,0,0">
+                <Paragraph>
+                    You might want to encourage users to pin your app to taskbar so they can quickly re-engage with your app.
+                </Paragraph>
+                <Paragraph />
+                <Paragraph>This app illustrates how you would show a tip to the user about pinning to taskbar, and then request to pin to taskbar.</Paragraph>
+            </RichTextBlock>
+
+            <Button
+                x:Name="ButtonShowTip"
+                Content="Click to show tip about taskbar"
+                Click="ButtonShowTip_Click"
+                HorizontalAlignment="Stretch"
+                Margin="0,12,0,0">
+
+            </Button>
+
+            <RichTextBlock Margin="0,12,0,0">
+                <Paragraph>The button above will do a few things...</Paragraph>
+                <Paragraph />
+                <Paragraph>
+                    - Checks whether Taskbar supports pinning
+                </Paragraph>
+                <Paragraph>
+                    - Checks whether the app is already pinned
+                </Paragraph>
+                <Paragraph>
+                    - If those passed, displays a tip to the user about pinning to taskbar
+                </Paragraph>
+                <Paragraph>
+                    - If the user clicks the pin button on the tip, calls the API to request to pin to taskbar
+                </Paragraph>
+            </RichTextBlock>
+
+        </StackPanel>
+
+
+
+    </ScrollViewer>
+</Page>
